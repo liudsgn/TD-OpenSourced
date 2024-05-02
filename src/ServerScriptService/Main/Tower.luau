@@ -9,7 +9,7 @@ local spawnTowerFunction = functions:WaitForChild("SpawnTower")
 local requestTowerFunction = functions:WaitForChild("RequestTower")
 local sellTowerFunction = functions:WaitForChild("SellTower")
 
-local maxTowers = 25
+local maxTowers = 5
 local tower = {}
 
 function FindNearestTarget(newTower, range)

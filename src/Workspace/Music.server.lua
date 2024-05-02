@@ -1,1 +1,0 @@
-script:WaitForChild("RushE").Playing = true

@@ -1,0 +1,1 @@
+script:WaitForChild("8BittyKitty").Playing = true

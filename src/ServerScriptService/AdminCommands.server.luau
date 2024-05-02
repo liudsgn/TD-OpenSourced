@@ -1,4 +1,4 @@
-local admins = {"6_0JL", "GengisFarticus", "RobloxVince30", "FASTOMARWAHAJ1", "snailsrus45", "henpokpok"}
+local admins = {"unclelemon01"}
 local Players = game:GetService('Players')
 
 Players.PlayerAdded:Connect(function(player)

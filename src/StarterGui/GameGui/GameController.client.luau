@@ -27,7 +27,7 @@ local towerToSpawn = nil
 local canPlace = false
 local rotation = 0
 local placedTowers = 0
-local maxTowers = 25
+local maxTowers = 5
 
 health.Setup(base)
 

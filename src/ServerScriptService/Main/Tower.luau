@@ -17,9 +17,9 @@ function FindNearestTarget(newTower, range)
 
 	for i, target in ipairs(workspace.Mobs:GetChildren()) do
 		local distance = (target.HumanoidRootPart.Position - newTower.HumanoidRootPart.Position).Magnitude
-		print(target.Name, distance)
+		-- print(target.Name, distance)
 		if distance < range then
-			print(target.Name, "Is the nearest target found so far")
+			-- print(target.Name, "Is the nearest target found so far")
 			nearestTarget = target
 			range = distance
 		end
@@ -100,9 +100,8 @@ function tower.Spawn(player, name, cframe, previous)
 
 		for i, object in ipairs(newTower:GetDescendants()) do
 			if object:IsA("BasePart") then
-				PhysicsService:SetPartCollisionGroup(object, "Tower")
+				object.CollisionGroup = "Tower"
 			end
-			
 		end
 		
 		player.Gold.Value -= newTower.Config.Price.Value

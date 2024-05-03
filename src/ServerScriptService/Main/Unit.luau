@@ -27,7 +27,7 @@ function unit.Spawn(name, quantity , map)
 
 			for i, object in ipairs(newUnit:GetDescendants()) do
 				if object:IsA("BasePart") then
-					PhysicsService:SetPartCollisionGroup(object, "Unit")
+					object.CollisionGroup = "Unit"
 				end
 			end
 

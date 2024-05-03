@@ -5,7 +5,7 @@ Players.PlayerAdded:Connect(function(player)
 	
 	local gold = Instance.new("IntValue")
 	gold.Name = "Gold"
-	gold.Value = 1500
+	gold.Value = 150000
 	gold.Parent = player
 	
 	local placedTowers = Instance.new("IntValue")
@@ -16,7 +16,7 @@ Players.PlayerAdded:Connect(function(player)
 	player.CharacterAdded:Connect(function(character)
 		for i, object in ipairs(character:GetDescendants()) do
 			if object:IsA("BasePart") then
-				PhysicsService:SetPartCollisionGroup(object, "Player")
+				object.CollisionGroup = "Player"
 			end
 		end
 	end)

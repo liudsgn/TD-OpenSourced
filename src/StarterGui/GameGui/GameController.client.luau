@@ -130,7 +130,7 @@ local function AddPlaceholderTower(name)
 
 		for i, object in ipairs(towerToSpawn:GetDescendants()) do
 			if object:IsA("BasePart") then
-				PhysicsService:SetPartCollisionGroup(object, "Tower")
+				object.CollisionGroup = "Tower"
 				if object.Name ~= "Range" then
 					object.Material = Enum.Material.ForceField
 					object.Transparency = 0.3
@@ -295,7 +295,7 @@ RunService.RenderStepped:Connect(function()
 		if towerToSpawn then
 			hoveredInstance = nil
 			
-			if result.Instance.Parent.Name == "TowerArea" then
+			if result.Instance.Name == "TowerArea" then
 				canPlace = true
 				ColorPlaceholderTower(Color3.new(0.384314, 0.8, 0.411765))
 			else

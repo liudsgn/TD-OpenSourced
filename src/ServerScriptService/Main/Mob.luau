@@ -32,7 +32,7 @@ function mob.Spawn(name, quantity, map)
 			
 			for i, object in ipairs(newMob:GetDescendants()) do
 				if object:IsA("BasePart") then
-					PhysicsService:SetPartCollisionGroup(object, "Mob")
+					object.CollisionGroup = "Mob"
 				end
 			end
 			

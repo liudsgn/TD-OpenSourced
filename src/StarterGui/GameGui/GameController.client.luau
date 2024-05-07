@@ -163,7 +163,7 @@ for i, tower in pairs(towers:GetChildren()) do
 		local camera = Instance.new("Camera")
 		camera.CameraType = Enum.CameraType.Scriptable
 		local WorldModel = button.ViewportFrame:WaitForChild("WorldModel")
-		local Animations = button.ViewportFrame.WorldModel.Animations
+		-- local Animations = button.ViewportFrame.WorldModel.Animations
 		local mainPart = ClonedTower
 
 		local ViewPortPoint = Vector3.new(0,0,0)
@@ -184,11 +184,11 @@ for i, tower in pairs(towers:GetChildren()) do
 
 		camera.CFrame = CFrame.new(0, -0.3, -40) * CFrame.Angles(0, math.rad(180), 0)
 
-		Animations.Parent = ClonedTower
+		-- Animations.Parent = ClonedTower
 		camera.Parent = button.ViewportFrame
 		camera.CameraSubject = ClonedTower
 		ClonedTower.Parent = button.ViewportFrame.WorldModel
-		Animations.Disabled = false
+		-- Animations.Disabled = false
 		camera.FieldOfView = 7
 		button.Parent = gui.Towers
 

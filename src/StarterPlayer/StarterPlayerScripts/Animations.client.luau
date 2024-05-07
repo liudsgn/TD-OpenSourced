@@ -6,7 +6,7 @@ local animateTowerEvent = events:WaitForChild("AnimateTower")
 local function setAnimation(object, animName)
 	local humanoid = object:WaitForChild("Humanoid")
 	local animationsFolder = object:WaitForChild("Animations")
-	
+
 	if humanoid and animationsFolder then
 		local animationObject = animationsFolder:WaitForChild(animName)
 		
@@ -35,6 +35,7 @@ local function playAnimation(object, animName)
 		warn("Lol animation doesn't exist")
 		return
 	end
+	print(animationTrack.IsPlaying, animName)
 end
 
 workspace.Mobs.ChildAdded:Connect(function(object)

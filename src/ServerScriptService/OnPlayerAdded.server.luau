@@ -13,7 +13,7 @@ Players.PlayerAdded:Connect(function(player)
 	placedTowers.Value = 0
 	placedTowers.Parent = player
 	
-	player.CharacterAdded:Connect(function(character)
+	player.CharacterAppearanceLoaded:Connect(function(character)
 		for i, object in ipairs(character:GetDescendants()) do
 			if object:IsA("BasePart") then
 				object.CollisionGroup = "Player"
